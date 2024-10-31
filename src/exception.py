@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 
 # The parameter error_detail: sys specifies that error_detail should be of type sys.
 def error_message_detail(error,error_detail:sys):
@@ -19,9 +19,3 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_mesaage
     
-if __name__=="__main__":
-    try:
-        a=1/0
-    except Exception as e:
-        logging.info("Divide by Zero")
-        raise 
