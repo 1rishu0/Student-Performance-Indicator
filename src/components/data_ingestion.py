@@ -7,6 +7,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
+# In Python, the @dataclass decorator is used to simplify the creation of classes that are mainly used to store data. 
+# When you define a class as a dataclass, Python automatically generates special methods for it, like __init__(), __repr__(), __eq__(), and __hash__() (if applicable), which reduces boilerplate code
 @dataclass
 class DataIngestionConfig:
     train_data_path: str=os.path.join("artifacts","train.csv")
