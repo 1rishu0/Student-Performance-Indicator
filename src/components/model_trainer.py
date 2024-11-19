@@ -68,9 +68,24 @@ class ModelTrainer:
                     # "max_features":["auto","sqrt","log2"],
                     "n_estimators":[8,16,32,64,128,256]
                 },
+                "Linear Regression":{},
+                "XGBRegressor":{
+                    "learning_rate":[.1,.01,.05,.001],
+                    "n_estimators":[8,16,32,64,128,256]
+                },
+                "CatBoosting Regressior":{
+                    "depth":[6,8,10],
+                    "learning_rate":[0.01,0.05,0.1],
+                    "iterations":[30,50,100]
+                },
+                "AdaBoost Regressor":{
+                    "learning_rate":[.1,.01,0.5,.001],
+                    # "loss":["linear","square","exponential"],
+                    "n_estimators":[8,16,32,64,128,256]
+                }
             }
 
-            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models)
+            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models,param=params)
 
             # To Get the Best model score from dict
             best_model_score=max(sorted(list(model_report.values())))
