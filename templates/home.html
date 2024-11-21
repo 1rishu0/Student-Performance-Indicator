@@ -1,0 +1,69 @@
+<html>
+    <body>
+        <div class="login">
+            <h1>Student Exam Performance Indicator</h1>
+
+            <form action="{{url_for('predict_datapoint')}}" method="post">
+                <h1>
+                    <legend>Student Exam Performance Prediction</legend>
+                </h1>
+                <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select name="gender" id="gender" class="form-control" placeholder="Enter your Gender" required>
+                        <option selected disabled value="" class="placeholder">Select Your Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Race or Ethnicity</label>
+                    <select name="ethnicity" class="form-control" placeholder="Enter you ethnicity" required>
+                        <option class="placeholder" selected disabled value="">Select Ethnicity</option>
+                        <option value="group A">
+                            Group A
+                        </option>
+                        <option value="group B">
+                            Group B 
+                        </option>
+                        <option value="group C">
+                            Group C 
+                        </option>
+                        <option value="group D">
+                            Group D 
+                        </option>
+                        <option value="group E">
+                            Group E 
+                        </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Parental Level of Education</label>
+                    <select name="parental_level_of_education" class="form-control" placeholder="Enter Your Parent Education" required>
+                        <option value="associate's degree" >
+                            associate's degree
+                        </option>
+                        <option value="bachelor's degree">
+                            bachelor's degree
+                        </option>
+                        <option value="high school">
+                            high school
+                        </option>
+                        <option value="master's degree">
+                            master's degree
+                        </option>
+                        <option value="some college">
+                            some college
+                        </option>
+                        <option value="some high school">
+                            some high school 
+                        </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Lunch Type</label>
+                    <select name="lunch" placeholder="Enter Yout lunch" class="form-control" required></select>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
