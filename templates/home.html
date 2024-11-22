@@ -83,8 +83,21 @@
                         </option>
                     </select>
                 </div>
-                <div class="mb-3"></div>
+                <div class="mb-3">
+                    <label class="form-label">Reading Score out of 100</label>
+                    <input type="number" class="form-control" name="reading_score" placeholder="Enter your Reading Score" min="0" max="100"/>
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Writing Score out of 100</label>
+                    <input type="number" name="writing_score" placeholder="Enter Your Writing Score" min="0" max="100" class="form-control"/>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-primary" value="Predict Your Maths Score" required/>
+                </div>
             </form>
+            <h2>
+                The Prediction is {{results}}
+            </h2>
         </div>
     </body>
 </html>
