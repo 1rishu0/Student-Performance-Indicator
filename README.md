@@ -40,8 +40,12 @@ This project aims to predict student performance (test scores) by analyzing vari
 
 ### **Model Deployment**  
 - **Pickle**: Serialize and save the trained model for deployment or later use.
+- **Docker**
 
----
+---   
+https://github.com/user-attachments/assets/0aec511a-5016-4706-86fa-cbd4aa270132
+
+
 
 ## Usage Instructions  
 
